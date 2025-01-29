@@ -1,0 +1,1 @@
+Il progetto sviluppato è un predittore di acidemia fetale allenato con i dati presenti al link https://www.physionet.org/content/ctu-uhb-ctgdb/1.0.0/.  La versione riportata del codice sorgente è una versione ristretta del codice utilizzato per produrre la tesi, con tutte le funzionalità principali. 
