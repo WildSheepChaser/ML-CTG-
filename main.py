@@ -136,7 +136,7 @@ def crea_dataset():
         
         a=fhr_red.tolist()
         b=UC_red.tolist()
-        if float(data)<7.05:
+        if float(data)<7.10:
             positivi.append({'fhr':a,'UC':b, 'pH':data, 'number': n})
             
         
@@ -552,7 +552,7 @@ def find_weight(r):
     neg=0
     for i in range(0,len(r)):
 
-        if r[i]<7.05:
+        if r[i]<7.10:
             pos+=1
         else:
             neg+=1
@@ -639,7 +639,7 @@ for key,i in dataset.items():
     stdfhr=np.std(a_int_fhr)
     trap=curvearea(segs,a_int_fhr,a_bl)
     total_X,total_Y,total_area=statistics(x,y,z)
-    if float(i['pH'])<7.05:
+    if float(i['pH'])<7.10:
         slopes_pos.append(s)
         area_pos.append(total_area)
         x_pos.append(total_X)
@@ -676,14 +676,14 @@ positive_B=[]
 negative_A=[]
 negative_B=[]
 for a in A_coeff:
-    if a['ph']<7.05:
+    if a['ph']<7.10:
         positive_A.append(a['coeffs'][0])
     else:
         negative_A.append(a['coeffs'][0])
 
 for b in B_coeff:
 
-    if b['ph']<7.05:
+    if b['ph']<7.10:
         positive_B.append(b['coeffs'][0])
         
     else:
@@ -694,14 +694,14 @@ numero=find_weight(real)
 
 weights=[]
 for i in y:
-    if i<7.05:
+    if i<7.10:
         weights.append(numero)
     else:
         weights.append(1)
 
 zeros_real=[]
 for s in y:
-    if s<7.05:
+    if s<7.10:
         zeros_real.append(1)
     else:
         zeros_real.append(0)
@@ -727,7 +727,7 @@ zeros_pred=[]
 
 pred=[]
 for a in r:
-    if a[0]<7.05:
+    if a[0]<7.10:
         zeros_pred.append(1)
         
     else:
